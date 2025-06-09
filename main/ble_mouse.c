@@ -30,25 +30,6 @@
 #include "driver/gpio.h"
 #include "hid_dev.h"
 
-/**
- * Brief:
- * This example Implemented BLE HID device profile related functions, in which the HID device
- * has 4 Reports (1 is mouse, 2 is keyboard and LED, 3 is Consumer Devices, 4 is Vendor devices).
- * Users can choose different reports according to their own application scenarios.
- * BLE HID profile inheritance and USB HID class.
- */
-
-/**
- * Note:
- * 1. Win10 does not support vendor report , So SUPPORT_REPORT_VENDOR is always set to FALSE, it defines in hidd_le_prf_int.h
- * 2. Update connection parameters are not allowed during iPhone HID encryption, slave turns
- * off the ability to automatically update connection parameters during encryption.
- * 3. After our HID device is connected, the iPhones write 1 to the Report Characteristic Configuration Descriptor,
- * even if the HID encryption is not completed. This should actually be written 1 after the HID encryption is completed.
- * we modify the permissions of the Report Characteristic Configuration Descriptor to `ESP_GATT_PERM_READ | ESP_GATT_PERM_WRITE_ENCRYPTED`.
- * if you got `GATT_INSUF_ENCRYPTION` error, please ignore.
- */
-
 #define HID_DEMO_TAG "HID_DEMO"
 
 /* this is for the IMU*/
@@ -258,30 +239,6 @@ static void gap_event_handler(esp_gap_ble_cb_event_t event, esp_ble_gap_cb_param
 
 void hid_demo_task(void *pvParameters)
 {
-    // const float sensitivity = 10.0f; // Adjust sensitivity for mouse movement
-    // const int step_delay_ms = 50;    // Delay between mouse updates
-    // printf("in demo task function\n");
-
-    // while (1) {
-    //     if (sec_conn) { // Check if BLE connection is established
-    //         float ax, ay, az;
-    //         if (icm42670_read_accel_g(&ax, &ay, &az)) {
-    //             // Map accelerometer values to mouse movement
-    //             int16_t mouse_x = (int16_t)(ax * sensitivity); // Scale X-axis movement
-    //             int16_t mouse_y = (int16_t)(-ay * sensitivity); // Scale Y-axis movement (invert for natural movement)
-
-    //             // Send mouse movement report
-    //             esp_hidd_send_mouse_value(hid_conn_id, 0, mouse_x, mouse_y);
-    //             // void esp_hidd_send_mouse_value(uint16_t conn_id, uint8_t mouse_button, int8_t mickeys_x, int8_t mickeys_y)
-
-    //             ESP_LOGI(HID_DEMO_TAG, "Mouse Move: X=%d, Y=%d", mouse_x, mouse_y);
-            
-    //         }
-    //     }
-
-    //     // Delay between updates
-    //     vTaskDelay(pdMS_TO_TICKS(step_delay_ms));
-    // }
     const float sensitivity = 50.0f; // Base sensitivity for mouse movement
     const int step_delay_ms = 50;    // Delay between mouse updates
     printf("in demo task function\n");
@@ -380,10 +337,6 @@ void app_main(void)
     esp_ble_gap_set_security_param(ESP_BLE_SM_AUTHEN_REQ_MODE, &auth_req, sizeof(uint8_t));
     esp_ble_gap_set_security_param(ESP_BLE_SM_IOCAP_MODE, &iocap, sizeof(uint8_t));
     esp_ble_gap_set_security_param(ESP_BLE_SM_MAX_KEY_SIZE, &key_size, sizeof(uint8_t));
-    /* If your BLE device act as a Slave, the init_key means you hope which types of key of the master should distribute to you,
-    and the response key means which key you can distribute to the Master;
-    If your BLE device act as a master, the response key means you hope which types of key of the slave should distribute to you,
-    and the init key means which key you can distribute to the slave. */
     esp_ble_gap_set_security_param(ESP_BLE_SM_SET_INIT_KEY, &init_key, sizeof(uint8_t));
     esp_ble_gap_set_security_param(ESP_BLE_SM_SET_RSP_KEY, &rsp_key, sizeof(uint8_t));
 
