@@ -1,0 +1,13 @@
+Command: /home/aakandel/.espressif/python_env/idf5.5_py3.10_env/bin/python /home/aakandel/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyACM0 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c3 --revision 3 --decode-panic backtrace /home/aakandel/esp/esp-idf/labs/lab4/lab4_3/build/hidd_demos.elf /home/aakandel/esp/esp-idf/labs/lab4/lab4_3/build/bootloader/bootloader.elf -m '/home/aakandel/.espressif/python_env/idf5.5_py3.10_env/bin/python' '/home/aakandel/esp/esp-idf/tools/idf.py'
+[0;33m--- esp-idf-monitor 1.6.2 on /dev/ttyACM0 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x40388f5a: rv_utils_wait_for_intr at /home/aakandel/esp/esp-idf/components/riscv/include/riscv/rv_utils.h:82
+---  (inlined by) esp_cpu_wait_for_intr at /home/aakandel/esp/esp-idf/components/esp_hw_support/cpu.c:62
+[0m
+[0;33m--- 0x403cbf10: esp_bootloader_get_description at /home/aakandel/esp/esp-idf/components/esp_bootloader_format/esp_bootloader_desc.c:39 (discriminator 1)
+[0m
+[0;33m--- 0x403ce710: esp_flash_encryption_enabled at /home/aakandel/esp/esp-idf/components/bootloader_support/src/flash_encrypt.c:89
+[0m
+[0;33m--- 0x403cbf1a: call_start_cpu0 at /home/aakandel/esp/esp-idf/components/bootloader/subproject/main/bootloader_start.c:25
+[0m
+[0m

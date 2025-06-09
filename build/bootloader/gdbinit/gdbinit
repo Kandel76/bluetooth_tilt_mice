@@ -1,0 +1,2 @@
+source /home/aakandel/esp/esp-idf/labs/lab4/lab4_3/build/bootloader/gdbinit/symbols
+source /home/aakandel/esp/esp-idf/labs/lab4/lab4_3/build/bootloader/gdbinit/connect

@@ -1,0 +1,217 @@
+Command: /home/aakandel/.espressif/python_env/idf5.5_py3.10_env/bin/python /home/aakandel/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyACM0 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c3 --revision 3 --decode-panic backtrace /home/aakandel/esp/esp-idf/labs/lab4/lab4_3/build/hidd_demos.elf /home/aakandel/esp/esp-idf/labs/lab4/lab4_3/build/bootloader/bootloader.elf -m '/home/aakandel/.espressif/python_env/idf5.5_py3.10_env/bin/python' '/home/aakandel/esp/esp-idf/tools/idf.py'
+[0;32mI (107) esp_image: segment 2: paddr=00030020 vaddr=42000020 sizeESP-ROM:esp32c3-api1-20210207[0m
+Build:Feb  7 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0xc (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40388f5a
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15b0
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2fe8
+entry 0x403cbf1a
+[0;32mI (24) boot: ESP-IDF v5.5-dev-2916-g1c468f6825-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time May  2 2025 17:10:41[0m
+[0;32mI (25) boot: chip revision: v0.4[0m
+[0;32mI (27) boot: efuse block revision: v1.3[0m
+[0;32mI (30) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (34) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (38) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (46) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (55) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (61) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (68) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (74) boot: End of partition table[0m
+[0;32mI (78) esp_image: segment 0: paddr=00010020 vaddr=3c090020 size=1e40ch (123916) map[0m
+[0;32mI (105) esp_image: segment 1: paddr=0002e434 vaddr=3fc94800 size=01be4h (  7140) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=00030020 vaddr=42000020 size=8fd44h (589124) map[0m
+[0;32mI (203) esp_image: segment 3: paddr=000bfd6c vaddr=3fc963e4 size=00d6ch (  3436) load[0m
+[0;32mI (204) esp_image: segment 4: paddr=000c0ae0 vaddr=40380000 size=14798h ( 83864) load[0m
+[0;32mI (222) esp_image: segment 5: paddr=000d5280 vaddr=50000000 size=0001ch (    28) load[0m
+[0;32mI (228) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (229) boot: Disabling RNG early entropy source...[0m
+[0;32mI (239) cpu_start: Unicore app[0m
+[0;32mI (248) cpu_start: Pro cpu start user code[0m
+[0;32mI (248) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (248) app_init: Application information:[0m
+[0;32mI (248) app_init: Project name:     hidd_demos[0m
+[0;32mI (252) app_init: App version:      v5.5-dev-2916-g1c468f6825-dirty[0m
+[0;32mI (258) app_init: Compile time:     May  2 2025 17:10:25[0m
+[0;32mI (263) app_init: ELF file SHA256:  ce620ac82...[0m
+[0;32mI (267) app_init: ESP-IDF:          v5.5-dev-2916-g1c468f6825-dirty[0m
+[0;32mI (273) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (277) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (281) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (285) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (291) heap_init: At 3FC9B570 len 00024A90 (146 KiB): RAM[0m
+[0;32mI (297) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (303) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (309) heap_init: At 5000001C len 00001FCC (7 KiB): RTCRAM[0m
+[0;32mI (315) spi_flash: detected chip: generic[0m
+[0;32mI (318) spi_flash: flash io: dio[0m
+[0;33mW (321) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (333) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (343) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (349) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (355) coexist: coex firmware version: 88dafd1[0m
+[0;32mI (360) coexist: coexist rom version 9387209[0m
+[0;32mI (364) main_task: Started on CPU0[0m
+[0;32mI (364) main_task: Calling app_main()[0m
+PWR_MGMT0 = 0x1F
+[0;32mI (724) BLE_INIT: BT controller compile version [566c8e3][0m
+[0;32mI (724) BLE_INIT: Bluetooth MAC: 64:e8:33:d8:02:be[0m
+[0;32mI (724) phy_init: phy_version 1201,bae5dd99,Mar  3 2025,15:36:21[0m
+[0;32mI (784) HID_LE_PRF: esp_hidd_prf_cb_hdl(), start added the hid service to the stack database. incl_handle = 40[0m
+[0;32mI (784) HID_LE_PRF: hid svc handle = 2d[0m
+in demo task function
+[0;32mI (794) main_task: Returned from app_main()[0m
+[0;32mI (944) HID_LE_PRF: HID connection establish, conn_id = 0[0m
+[0;32mI (944) HID_DEMO: ESP_HIDD_EVENT_BLE_CONNECT[0m
+[0;32mI (1024) HID_DEMO: remote BD_ADDR: e0d4e85dd8ff[0m
+[0;32mI (1024) HID_DEMO: address type = 0[0m
+[0;32mI (1024) HID_DEMO: pair status = success[0m
+[0;32mI (1084) HID_DEMO: ESP_HIDD_EVENT_BLE_LED_REPORT_WRITE_EVT[0m
+[0;32mI (1084) HID_DEMO: 01[0m
+[0;32mI (1114) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (1234) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (1354) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (1474) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (1594) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (1714) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (1834) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (1954) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (2074) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (2194) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (2314) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (2434) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (2554) HID_DEMO: Mouse Move: X=-1, Y=0[0m
+[0;32mI (2674) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (2794) HID_DEMO: Mouse Move: X=-2, Y=0[0m
+[0;32mI (2914) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (3034) HID_DEMO: Mouse Move: X=-1, Y=0[0m
+[0;32mI (3154) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (3274) HID_DEMO: Mouse Move: X=0, Y=-5[0m
+[0;32mI (3394) HID_DEMO: Mouse Move: X=0, Y=-11[0m
+[0;32mI (3514) HID_DEMO: Mouse Move: X=0, Y=-10[0m
+[0;32mI (3634) HID_DEMO: Mouse Move: X=0, Y=-11[0m
+[0;32mI (3754) HID_DEMO: Mouse Move: X=0, Y=-13[0m
+[0;32mI (3874) HID_DEMO: Mouse Move: X=0, Y=-16[0m
+[0;32mI (3994) HID_DEMO: Mouse Move: X=-4, Y=-17[0m
+[0;32mI (4114) HID_DEMO: Mouse Move: X=-5, Y=-24[0m
+[0;32mI (4234) HID_DEMO: Mouse Move: X=-1, Y=-22[0m
+[0;32mI (4354) HID_DEMO: Mouse Move: X=-1, Y=-23[0m
+[0;32mI (4474) HID_DEMO: Mouse Move: X=0, Y=-29[0m
+[0;32mI (4594) HID_DEMO: Mouse Move: X=-2, Y=-27[0m
+[0;32mI (4714) HID_DEMO: Mouse Move: X=-2, Y=-28[0m
+[0;32mI (4834) HID_DEMO: Mouse Move: X=0, Y=-28[0m
+[0;32mI (4954) HID_DEMO: Mouse Move: X=0, Y=-10[0m
+[0;32mI (5074) HID_DEMO: Mouse Move: X=-3, Y=-8[0m
+[0;32mI (5194) HID_DEMO: Mouse Move: X=-15, Y=-1[0m
+[0;32mI (5314) HID_DEMO: Mouse Move: X=-1, Y=-19[0m
+[0;32mI (5434) HID_DEMO: Mouse Move: X=-1, Y=-2[0m
+[0;32mI (5554) HID_DEMO: Mouse Move: X=-2, Y=-1[0m
+[0;32mI (5674) HID_DEMO: Mouse Move: X=-2, Y=-9[0m
+[0;32mI (5724) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (5774) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (5834) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (5884) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (5934) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (5984) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (6034) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (6084) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (6134) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (6184) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (6244) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (6294) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (6344) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (6394) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (6444) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (6494) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (6544) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (6604) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (6654) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (6704) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (6754) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (6804) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (6854) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (6904) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (6954) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (7004) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (7064) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (7114) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (7164) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (7214) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (7264) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (7314) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (7364) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (7414) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (7464) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (7514) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (7564) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (7614) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (7664) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (7714) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (7764) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (7814) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (7864) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (7914) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (7964) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (8014) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (8064) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (8114) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (8164) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (8214) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (8264) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (8314) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (8364) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (8414) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (8464) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (8514) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (8564) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (8614) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (8664) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (8714) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (8764) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (8814) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (8864) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (8914) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (8964) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (9014) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (9064) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (9114) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (9164) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (9224) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (9274) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (9324) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (9374) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (9424) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (9474) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (9524) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (9574) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (9624) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (9674) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (9724) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (9774) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (9824) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (9874) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (9924) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (9974) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (10024) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (10074) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (10124) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (10174) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (10224) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (10274) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (10324) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (10374) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (10424) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (10474) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (10524) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (10574) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (10624) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (10674) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (10724) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (10774) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (10824) HID_DEMO: Mouse Move: X=0, Y=0[0m
+[0;32mI (10874) HID_DEMO: Mouse Move: X=0, Y=0[0m
